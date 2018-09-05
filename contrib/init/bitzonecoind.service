@@ -1,0 +1,26 @@
+[Unit]
+Description=BITZONECOIN's distributed currency daemon
+After=network.target
+
+[Service]
+User=bitzonecoin
+Group=bitzonecoin
+
+Type=forking
+PIDFile=/var/lib/bitzonecoind/bitzonecoind.pid
+
+ExecStart=/usr/bin/bitzonecoind -daemon -pid=/var/lib/bitzonecoind/bitzonecoind.pid \
+          -conf=/etc/bitzonecoin/bitzonecoin.conf -datadir=/var/lib/bitzonecoind
+
+ExecStop=-/usr/bin/bitzonecoin-cli -conf=/etc/bitzonecoin/bitzonecoin.conf \
+         -datadir=/var/lib/bitzonecoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

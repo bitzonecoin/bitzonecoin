@@ -1,0 +1,26 @@
+# /etc/conf.d/bitzonecoind: config file for /etc/init.d/bitzonecoind
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/bitzonecoin/bitzonecoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bitzonecoind"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bitzonecoind.pid"
+
+# Where to write bitzonecoind data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bitzonecoind"
+
+# User and group to own bitzonecoind process
+#BITCOIND_USER="bitzonecoin"
+#BITCOIND_GROUP="bitzonecoin"
+
+# Path to bitzonecoind executable
+#BITCOIND_BIN="/usr/bin/bitzonecoind"
+
+# Nice value to run bitzonecoind under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

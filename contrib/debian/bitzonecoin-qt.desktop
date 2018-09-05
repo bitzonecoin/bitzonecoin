@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BitZoneCoin
+Comment=BitZoneCoin P2P Cryptocurrency
+Comment[fr]=BitZoneCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BitZoneCoin, eşten eşe kriptografik sanal para birimi
+Exec=bitzonecoin-qt %u
+Terminal=false
+Type=Application
+Icon=bitzonecoin128
+MimeType=x-scheme-handler/bitzonecoin;
+Categories=Office;Finance;
